@@ -2,6 +2,7 @@ package main
 
 import (
 	"GoExercises/ch1"
+	"GoExercises/ch2"
 	"fmt"
 	"strconv"
 	"strings"
@@ -50,13 +51,15 @@ func main() {
 		"1.4": true,
 		"1.5": true,
 		"1.6": true,
+		"2.2": true,
 	}
 
 	hr := "\n====================\n"
 
 	println("HELLO, THIS IS THE GO EXERCISES FOLDER")
 	println("MADE BY DMITRY ROSIN, STUDENT OF KOSYGIN RSU, GROUP MPM-121")
-	println("To see the help page, type 'help', to exit the program, type 'exit'")
+	println("To see the help page, type 'help', to see the list of exercises, type 'list'.")
+	println("To exit the program, type 'exit'")
 	println(hr)
 
 	for {
@@ -74,6 +77,7 @@ func main() {
 				{
 					println("You can pop up this HELP page again by typing 'help' or 'h' when you're choosing exercises.")
 					println("You can EXIT the program by typing 'exit', 'e' or '-1' when you're choosing exercises.")
+					println("You can see the list of avaliable exercises by  typing 'list' or 'l' when you're choosing exercises.")
 					println("You can choose the EXERCISE you wanna check by typing its number like it was in the book.")
 					println("For example you can type '1.1' or '1.12'. You shouldn't add any zeros like '01.01'.")
 					println("Also you should use a point '.' not a comma ',' as a separator.")
@@ -84,6 +88,11 @@ func main() {
 				{
 					println("Thank you for using the program. In hope for a good mark :)")
 					return
+				}
+			case strings.ToLower(line) == "list" || strings.ToLower(line) == "l":
+				{
+					println("Chatper 1: \n1.1\t1.2\t1.3\t1.4\t1.5\t1.6 \n")
+					println("Chapter 2: \n2.2")
 				}
 			case done[line]:
 				{
@@ -103,6 +112,10 @@ func main() {
 					case "1.6":
 						println("Name of the output file (without extension):")
 						ch1.Ex6(enterArgs(1))
+					case "2.2":
+						ch2.Ex2()
+					case "2.3", "2.4", "2.5":
+						println("Please, for the benchmarks of exercises 2.3-2.5 run the file from cmd.")
 					}
 				}
 
