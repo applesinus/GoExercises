@@ -3,6 +3,7 @@ package main
 import (
 	"GoExercises/ch1"
 	"GoExercises/ch2"
+	"GoExercises/ch3"
 	"fmt"
 	"strconv"
 	"strings"
@@ -52,6 +53,10 @@ func main() {
 		"1.5": true,
 		"1.6": true,
 		"2.2": true,
+		"2.3": true,
+		"2.4": true,
+		"2.5": true,
+		"3.1": true,
 	}
 
 	hr := "\n====================\n"
@@ -92,7 +97,8 @@ func main() {
 			case strings.ToLower(line) == "list" || strings.ToLower(line) == "l":
 				{
 					println("Chatper 1: \n1.1\t1.2\t1.3\t1.4\t1.5\t1.6 \n")
-					println("Chapter 2: \n2.2")
+					println("Chapter 2: \n2.2\t2.3\t2.4\t2.5 \n")
+					println("Chapter 3: \n3.1 \n")
 				}
 			case done[line]:
 				{
@@ -116,6 +122,8 @@ func main() {
 						ch2.Ex2()
 					case "2.3", "2.4", "2.5":
 						println("Please, for the benchmarks of exercises 2.3-2.5 run the file from cmd.")
+					case "3.1":
+						ch3.Ex1()
 					}
 				}
 
