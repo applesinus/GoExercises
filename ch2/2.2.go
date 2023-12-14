@@ -41,6 +41,12 @@ func temp(t string) {
 	}
 	fmt.Printf("%s deg Fahrenheit = %f deg Celsius\n", t, (value-32)*5/9)
 	fmt.Printf("%s deg Celsius = %f deg Fahrenheit\n", t, (value+32)/5*9)
+
+	fmt.Printf("%s deg Celsius = %f deg Kelvin\n", t, value-273.15)
+	fmt.Printf("%s deg Kelvin = %f deg Celsius\n", t, value+273.15)
+
+	fmt.Printf("%s deg Fahrenheit = %f deg Kelvin\n", t, (value-32)*5/9-273.15)
+	fmt.Printf("%s deg Kelvin = %f deg Fahrenheit\n", t, (value+32)/5*9+273.15)
 }
 
 func Ex2() {
